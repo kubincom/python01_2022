@@ -4,6 +4,8 @@ def sms_rozesilka(cislo: int,):
     elif len(cislo) == 13:
       if "+420" in cislo:
         return True
+      else: 
+        return False
     else:
       return False
 
