@@ -9,12 +9,17 @@ def sms_rozesilka(cislo: int,):
     else:
       return False
 
+def sms_rozesilka_text():
+     cena = round(((len(zprava))//180+1)*3)  
+     print (f"Vaše sms na tel. číslo {cislo} byla odeslana za {cena} Kč.")
+   
+
 cislo = (input("Zadej číslo: "))
 cislo = cislo.replace(" ", "")
+zprava= input("jakou zprávu chcete poslat? ")
+
 if sms_rozesilka(cislo) == False:
       print("špatné telefonní číslo")
 else:
-  zprava = (input("jakou zprávu chcete poslat? "))
-  cena = round(((len(zprava))//180+1)*3)
-  print (f"Cena sms je {cena} Kč.")
+  sms_rozesilka_text()
 
