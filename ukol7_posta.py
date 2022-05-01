@@ -8,7 +8,7 @@ import re
 nahrazeni = web.replace("\n"," ")
 print(re.sub(' +', ' ', 'nahrazeni'))
 
-psc = re.compile(r"\d{3} \d{2} [A-Z]\w+ [A-Z|0-9|]")
+psc = re.compile(r"\d{3} \d{2} [A-Za-z]\w+ *[A-Za-z0-9]*\w+ *[A-Za-z0-9]*\w+ *[A-Za-z0-9]*\w+ *[A-Za-z0-9]*\w+")
 print(psc.findall(nahrazeni))
 vysledky = psc.findall(nahrazeni)
 for vysledek in vysledky:
